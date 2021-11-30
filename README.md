@@ -1,4 +1,4 @@
-# NoordhoffPatcher
+# Noordhoff Repairman
 A Google Chrome extension that automatically fills in answers for online homework of subjects published by Noordhoff Uitgevers.
 
 <p align="center">
@@ -18,7 +18,7 @@ I am currently writing a version for the latest Noordhoff assignments.
 * There are other assignments where it could grab the answers from but they are currently onlyn logged inside of the console.
 
 # Installation
-1. Clone this repository or click here -> (<a href="https://github.com/sanderDijkxhoorn/NoordhoffPatcher/archive/refs/heads/master.zip" target="_blank">master.zip</a>)
+1. Clone this repository or click here -> (<a href="https://github.com/sanderDijkxhoorn/NoordhoffRepairman/archive/refs/heads/main.zip" target="_blank">master.zip</a>)
 2. Enable developer mode. Chrome: [chrome://extensions/](chrome://extensions/) Brave: [brave://extensions/](brave://extensions/)
 3. Click "Load unpacked" and select the folder you cloned the repository to. (if you are using the master.zip make sure to unzip it first)
 
