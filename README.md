@@ -10,7 +10,7 @@ TechnologicNick:
 I wrote this somewhere in my first year of highschool. It was still a userscript and was able to fill in answers for the subjects Dutch, French, German and mathematics. In the third year I turned it into a Chrome extension. Noordhoff Uitgevers then released their new online homework platform, Digilino. I made the extension fill in the answers for the new platform too, which added science to the list of subjects.
 
 sanderDijkxhoorn:
-I am currently writing a version for the latest Noordhoff assignments.
+First year of MBO, writing the function to gether all answers and created auto fillin for Textentry questions
 
 # Current state
 * Assigments using Digilino should still work.
