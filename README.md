@@ -1,9 +1,9 @@
 # NoordhoffPatcher
 A Google Chrome extension that automatically fills in answers for online homework of subjects published by Noordhoff Uitgevers.
+
 <p align="center">
   <img src="https://user-images.githubusercontent.com/15117158/139592259-d9586dab-09bd-46d9-bc0c-a8c52ae07d18.png">
 </p>
-
 
 # About
 TechnologicNick:
