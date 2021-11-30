@@ -9,6 +9,20 @@ body {
   background-color: #202020;
 }
 
+.TopText {
+  position: relative; left: 10px;
+}
+
+.topbuttonslider{
+  position: absolute; 
+  right: 0px; 
+  top: 3px;
+}
+
+.color-orange{
+  border-color: #ff8000;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
