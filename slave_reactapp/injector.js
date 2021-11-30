@@ -2,8 +2,8 @@ console.log("Injecting... (slave_reactapp)");
 
 chrome.storage.sync.get({
     slider_alles: true,
-    slider_knop: true,
-    slider_auto: false
+    slider_knop: false,
+    slider_auto: true
 }, function (items) {
 
     if (!items.slider_alles) {
