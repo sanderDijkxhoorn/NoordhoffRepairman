@@ -1,6 +1,5 @@
 console.log("Automatic answer!");
-setTimeout(function() {
+setTimeout(function () {
   npShowAnswers();
-  document.getElementsByClassName('topSteps')[0].onclick = npShowAnswers;
-  
+  document.getElementsByClassName("topSteps")[0].onclick = npShowAnswers;
 }, 50);

@@ -4,11 +4,11 @@ function npShowAnswers() {
   const interactions = eLS.Navigation.currentPage.getCorregibleChildren();
   // console.log(interactions);
 
-   /*var getAnswerElement = function(j){
+  /* var getAnswerElement = function(j){
         for (var i = 0; i < interactions.length; i++) {
 
         }
-    }*/
+    } */
 
   const interactionContainers = document.getElementsByClassName(
     "pl-interactionContainer"

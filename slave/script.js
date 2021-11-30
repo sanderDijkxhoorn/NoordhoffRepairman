@@ -1,50 +1,53 @@
-//alert('script' + window.name);
-log('Script added! ' + window.location.hostname);
+// alert('script' + window.name);
+log("Script added! " + window.location.hostname);
 
-function npShowAnswers(){
-    var EX_SINGLECHOICE = 1;
-    var EX_MULTIPLECHOICE = 2;
-    var EX_TEXTENTRY = 3;
-    var EX_DRAGNDROP = 4;
-    var EX_DRAGNSORT = 5;
-    var EX_DRAGNSTACK = 6;
-    var EX_DRAGCONTAINER = 7;
-    var EX_TRUEORFALSE = 8;
-    var EX_TEXTENTRYDROPLIST = 9;
-    var EX_CONNECTION = 10;
-    var EX_SHAPECLICK = 11;
-    var EX_PAIRS = 12;
-    var EX_SIMPLE = 13;
-    var EX_SMARTASSET = 14;
-    var EX_DRAGNDROPSTACKSENTENCE = 15;
-    
-    var exercise = tempExContainer[0];
-    var cab = exercise.config.correctAnswerBehaviour;
-    exercise.config.correctAnswerBehaviour = "SHOW_NO_GRAPHIC_TIPPS";
-    exercise.showCorrectAnswer();
-    exercise.config.correctAnswerBehaviour = cab;
-    
-    var index;
-    
-    log("exercise.type = " + exercise.type);
-    
-    switch(exercise.type){
-        case EX_SINGLECHOICE: //1
-            log("1");
-            break;
-        case EX_DRAGCONTAINER: //7
-            log("7");
-            break;
-        default:
-            log("default");
-            log("test");
-            for (index in exercise.items) {
-                var targetText = exercise.items[index].targetText;
-                exercise.items[index].correct = true;
-                exercise.items[index].selected = targetText.indexOf("|") !== -1 ? targetText.split("|")[0] : targetText;
-                exercise.items[index].processed = true;
-            }
-        /*
+function npShowAnswers() {
+  const EX_SINGLECHOICE = 1;
+  const EX_MULTIPLECHOICE = 2;
+  const EX_TEXTENTRY = 3;
+  const EX_DRAGNDROP = 4;
+  const EX_DRAGNSORT = 5;
+  const EX_DRAGNSTACK = 6;
+  const EX_DRAGCONTAINER = 7;
+  const EX_TRUEORFALSE = 8;
+  const EX_TEXTENTRYDROPLIST = 9;
+  const EX_CONNECTION = 10;
+  const EX_SHAPECLICK = 11;
+  const EX_PAIRS = 12;
+  const EX_SIMPLE = 13;
+  const EX_SMARTASSET = 14;
+  const EX_DRAGNDROPSTACKSENTENCE = 15;
+
+  const exercise = tempExContainer[0];
+  const cab = exercise.config.correctAnswerBehaviour;
+  exercise.config.correctAnswerBehaviour = "SHOW_NO_GRAPHIC_TIPPS";
+  exercise.showCorrectAnswer();
+  exercise.config.correctAnswerBehaviour = cab;
+
+  let index;
+
+  log("exercise.type = " + exercise.type);
+
+  switch (exercise.type) {
+    case EX_SINGLECHOICE: // 1
+      log("1");
+      break;
+    case EX_DRAGCONTAINER: // 7
+      log("7");
+      break;
+    default:
+      log("default");
+      log("test");
+      for (index in exercise.items) {
+        const targetText = exercise.items[index].targetText;
+        exercise.items[index].correct = true;
+        exercise.items[index].selected =
+          targetText.indexOf("|") !== -1
+            ? targetText.split("|")[0]
+            : targetText;
+        exercise.items[index].processed = true;
+      }
+      /*
             try{
                 for (index in exercise.items) {
                     exercise.items[index].correct = true;
@@ -59,13 +62,11 @@ function npShowAnswers(){
                     exercise.items[index].processed = true;
                 }
                 log("case: choice");
-            }*/
-            break;
-    }
-    
-    
-    
-    /*
+            } */
+      break;
+  }
+
+  /*
     switch(exercise.type){
         case EX_SINGLECHOICE:
         case EX_MULTIPLECHOICE:
@@ -95,22 +96,18 @@ function npShowAnswers(){
                     exercise.items[index].processed = true;
                 }
             }
-            
+
             break;
-    }*/
-    
-    
-    
-    //switch(exercise.type){
-    //    case EX_TEXTENTRYDROPLIST:
-    //        break;
-    //}
-    
-    exercise.updateOkBtn();
+    } */
+
+  // switch(exercise.type){
+  //    case EX_TEXTENTRYDROPLIST:
+  //        break;
+  // }
+
+  exercise.updateOkBtn();
 }
 
-
-
-function log(m){
-    console.log('Slave: ' + m);
+function log(m) {
+  console.log("Slave: " + m);
 }

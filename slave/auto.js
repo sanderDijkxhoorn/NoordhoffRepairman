@@ -1,4 +1,4 @@
 log("Automatic answer!");
-setTimeout(function() {
+setTimeout(function () {
   npShowAnswers();
 }, 50);
