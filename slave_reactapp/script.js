@@ -11,13 +11,10 @@ async function FetchAnswerSEQ(answerditaurl) {
     console.log("Fetching Sequencing answer('s)");
 
     var xmlparsed = await XMLPARGE(answerditaurl.url);
-
     var btns = xmlparsed.querySelectorAll('lcAnswerContent2 p');
-
     var btnsArr = Array.from(btns);
-
-
     var acount = 0;
+
     btnsArr.forEach(el => {
         acount++;
         console.log("FetchAnswerSEQ: " + acount + ": " + el.textContent)
@@ -31,9 +28,7 @@ async function FetchAnswerOV(answerditaurl) {
     console.log("Fetching Open vraag answer('s)");
 
     var xmlparsed = await XMLPARGE(answerditaurl.url);
-
     var btns = xmlparsed.querySelectorAll('lcOpenAnswer2 p');
-
     var btnsArr = Array.from(btns);
 
     btnsArr.forEach(el => {
@@ -50,12 +45,10 @@ async function FetchAnswerIC(answerditaurl) {
     console.log("Fetching Inline choice answer('s)");
 
     var xmlparsed = await XMLPARGE(answerditaurl.url);
-
     var tcorrectresponse = xmlparsed.querySelectorAll('lcCorrectResponse2')
-
     let choises = Array.from(tcorrectresponse);
-
     var tcount = 0;
+
     for (let el of choises) {
         tcount++;
         console.log("Vraag: " + tcount + ": " + el.parentElement.querySelector('lceAnswerContentInline').textContent)
@@ -67,9 +60,7 @@ async function FetchAnswerMATCH(answerditaurl) {
     console.log("Fetching Matching answer('s)");
 
     var xmlparsed = await XMLPARGE(answerditaurl.url);
-
     var tcorrectresponse = xmlparsed.querySelectorAll('lcMatchingPair2');
-
     let choises = Array.from(tcorrectresponse);
 
     /*var combicountr = 0;
@@ -99,9 +90,9 @@ async function FetchAnswerMATCH(answerditaurl) {
     })*/
     var questnr = 0;
 
-    choises.forEach( el => {
+    choises.forEach(el => {
         questnr++;
-        console.log(`FetchAnswerMATCH: combi #${questnr}: ${el.querySelector("lcItem2 p").textContent} = ${el.querySelector("lcMatchingItem2  p").textContent}`) 
+        console.log(`FetchAnswerMATCH: combi #${questnr}: ${el.querySelector("lcItem2 p").textContent} = ${el.querySelector("lcMatchingItem2  p").textContent}`)
     })
 
     //console.log("Deze functie is nog niet toegevoegd. (FetchAnswerMATCH) url:", answerditaurl.url);
@@ -113,9 +104,7 @@ async function FetchAnswerSC(answerditaurl) {
     //console.log(answerditaurl.url)
 
     var xmlparsed = await XMLPARGE(answerditaurl.url);
-
     var tcorrectresponse = xmlparsed.querySelectorAll('lcCorrectResponse2')
-
     let choises = Array.from(tcorrectresponse);
 
     for (let el of choises) {
@@ -130,7 +119,6 @@ async function FetchAnswerMultiMATCH(answerditaurl) {
     console.log("Fetching Multi choice answer('s)")
 
     var xmlparsed = await XMLPARGE(answerditaurl.url);
-
     let choises = Object.fromEntries(Array.from(xmlparsed.querySelectorAll("lceAssociableMatch")).map(el => [el.getAttribute("id"), el.firstElementChild.textContent]));
     let statements = Object.fromEntries(Array.from(xmlparsed.querySelectorAll("lceAssociableItem")).map(el => [el.getAttribute("id"), el.firstElementChild.textContent]));
     let answers = Array.from(xmlparsed.querySelectorAll("lceMatchPair")).map(el => statements[el.children[0].getAttribute("href").split("/")[1]] + " = " + choises[el.children[1].getAttribute("href").split("/")[1]]);
@@ -143,15 +131,10 @@ async function FetchAnswerTE(answerditaurl) {
     console.log("Fetching Text entry answer('s)")
 
     var xmlparsed = await XMLPARGE(answerditaurl.url);
-
     var btns = xmlparsed.querySelectorAll('lceTextEntryOptions');
-
     var btnsArr = Array.from(btns);
-
     var firstpartanswer;
-
     var elcount = 0;
-
     var arranswrs = [];
 
     btnsArr.forEach(el => {
@@ -162,7 +145,6 @@ async function FetchAnswerTE(answerditaurl) {
     })
 
     var btns2 = document.querySelectorAll("span span input");
-
     var btnsArr2 = Array.from(btns2);
 
     // console.log(btns2)
@@ -220,17 +202,16 @@ function reactapp_npEnableFetchHook(enabled) {
     }
 }
 
-function reactapp_npShowAnswers(/*currentPage*/) {
+function reactapp_npShowAnswers( /*currentPage*/ ) {
     //console.log(currentPage)
     //console.log("Showing answers");
 }
 
-function reactapp_npOnHashChange(/*hashChangeEvent*/) {
+function reactapp_npOnHashChange( /*hashChangeEvent*/ ) {
     //console.log(hashChangeEvent);
 
     let regexUuid = `[a-f0-9]{8}-[a-f0-9]{4}-4[a-f0-9]{3}-[89aAbB][a-f0-9]{3}-[a-f0-9]{12}`
     let regexUrl = new RegExp(`^#\/plp\/book\/(?<book>${regexUuid})\/chapter\/(?<chapter>${regexUuid})\/paragraph\/(?<paragraph>${regexUuid})\/lesson\/(?<lesson>${regexUuid})`);
-
     let matched = window.location.hash.match(regexUrl);
 
     reactapp_npEnableFetchHook(matched);

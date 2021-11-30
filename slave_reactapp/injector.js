@@ -16,5 +16,4 @@ chrome.storage.sync.get({
     script.setAttribute("slider-button", items.slider_knop);
     script.setAttribute("slider-auto", items.slider_auto);
     document.head.appendChild(script);
-
 });
