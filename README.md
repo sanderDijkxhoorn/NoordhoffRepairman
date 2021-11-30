@@ -2,7 +2,7 @@
 A Google Chrome extension that automatically fills in answers for online homework of subjects published by Noordhoff Uitgevers.
 
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/15117158/144047783-00b2ea8e-75f0-40dd-96db-72ef24d645a8.png">
+  <img src="https://user-images.githubusercontent.com/15117158/144047870-af685ac2-8b65-4cad-9bb2-41ce9442165a.png">
 </p>
 
 # About
