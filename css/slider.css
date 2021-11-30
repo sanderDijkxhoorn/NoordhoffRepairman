@@ -4,7 +4,7 @@ body {
   min-width: 260px;
   max-width: 100%;
   position: relative;
-  vertical-align:middle;
+  vertical-align: middle;
   color: white;
   background-color: #202020;
 }
@@ -18,11 +18,13 @@ body {
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+.switch input {
+  display: none;
+}
 
 .switch.right {
-    position: absolute;
-    right: 0px;
+  position: absolute;
+  right: 0px;
 }
 
 /* The slider */
@@ -34,8 +36,8 @@ body {
   right: 0;
   bottom: 0;
   background-color: #606060;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .slider:before {
@@ -46,8 +48,8 @@ body {
   left: 2px;
   bottom: 2px;
   background-color: white;
-  -webkit-transition: .1s;
-  transition: .1s;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 input:checked + .slider {
