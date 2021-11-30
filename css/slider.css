@@ -1,3 +1,14 @@
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+  min-width: 260px;
+  max-width: 100%;
+  position: relative;
+  vertical-align:middle;
+  color: white;
+  background-color: #202020;
+}
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
