@@ -27,19 +27,3 @@ I am currently writing a version for the latest Noordhoff assignments.
 2. Change the settings
 3. Start an exercise
 4. Enjoy
-
-# Current state
-* Assigments using Digilino should still work.
-* Text entry questions automatically fill in if there is only one page per question. (You have to make a little change to each answer to make it detect you filled in an answer. Still working on a bypass.)
-* There are other assignments where it could grab the answers from but they are currently onlyn logged inside of the console.
-
-# Installation
-1. Clone this repository or click here -> (<a href="https://github.com/sanderDijkxhoorn/NoordhoffPatcher/archive/refs/heads/master.zip" target="_blank">master.zip</a>)
-2. Enable developer mode. Chrome: [chrome://extensions/](chrome://extensions/) Brave: [brave://extensions/](brave://extensions/)
-3. Click "Load unpacked" and select the folder you cloned the repository to. (if you are using the master.zip make sure to unzip it first)
-
-# Usage
-1. Click on the extension icon
-2. Change the settings
-3. Start an exercise
-4. Enjoy
