@@ -1,6 +1,7 @@
 console.log("Injecting... (slave_reactapp)");
 
-chrome.storage.sync.get({
+chrome.storage.sync.get(
+  {
     slider_alles: true,
     slider_knop: false,
     slider_auto: true,
