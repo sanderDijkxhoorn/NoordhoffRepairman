@@ -12,16 +12,14 @@ chrome.storage.sync.get({
 
     const script = document.createElement("script");
     script.type = "text/javascript";
+    script.setAttribute("slider-button", items.slider_knop);
+    script.setAttribute("slider-auto", items.slider_auto);
     if (items.slider_knop) {
       script.src = chrome.extension.getURL("slave_reactapp/button.js");
-      script.setAttribute("slider-button", items.slider_knop);
-      script.setAttribute("slider-auto", items.slider_auto);
       document.head.appendChild(script);
     } else {
       if (items.slider_auto) {
         script.src = chrome.extension.getURL("slave_reactapp/script.js");
-        script.setAttribute("slider-button", items.slider_knop);
-        script.setAttribute("slider-auto", items.slider_auto);
         document.head.appendChild(script);
       }
     }
