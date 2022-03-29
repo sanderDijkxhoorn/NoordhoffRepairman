@@ -52,9 +52,9 @@ async function FetchAnswerIC(answerditaurl) {
     tcount++;
     console.log(
       "Vraag: " +
-      tcount +
-      ": " +
-      el.parentElement.querySelector("lceAnswerContentInline").textContent
+        tcount +
+        ": " +
+        el.parentElement.querySelector("lceAnswerContentInline").textContent
     );
   }
 }
@@ -118,7 +118,7 @@ async function FetchAnswerSC(answerditaurl) {
     // console.log(el.parentElement)
     console.log(
       "FetchAnswerSC: " +
-      el.parentElement.querySelector("lcAnswerContent2 p").textContent
+        el.parentElement.querySelector("lcAnswerContent2 p").textContent
     );
   }
 
@@ -143,9 +143,9 @@ async function FetchAnswerMultiMATCH(answerditaurl) {
   );
   const answers = Array.from(xmlparsed.querySelectorAll("lceMatchPair")).map(
     (el) =>
-    statements[el.children[0].getAttribute("href").split("/")[1]] +
-    " = " +
-    choises[el.children[1].getAttribute("href").split("/")[1]]
+      statements[el.children[0].getAttribute("href").split("/")[1]] +
+      " = " +
+      choises[el.children[1].getAttribute("href").split("/")[1]]
   );
 
   answers.forEach((answer) => console.log(answer));
@@ -245,12 +245,12 @@ function reactapp_npEnableFetchHook(enabled) {
   }
 }
 
-function reactapp_npShowAnswers( /* currentPage */ ) {
+function reactapp_npShowAnswers(/* currentPage */) {
   // console.log(currentPage)
   // console.log("Showing answers");
 }
 
-function reactapp_npOnHashChange( /* hashChangeEvent */ ) {
+function reactapp_npOnHashChange(/* hashChangeEvent */) {
   // console.log(hashChangeEvent);
 
   const regexUuid =
