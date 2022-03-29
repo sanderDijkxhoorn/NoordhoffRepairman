@@ -12,7 +12,7 @@ TechnologicNick:
 I wrote this somewhere in my first year of highschool. It was still a userscript and was able to fill in answers for the subjects Dutch, French, German and mathematics. In the third year I turned it into a Chrome extension. Noordhoff Uitgevers then released their new online homework platform, Digilino. I made the extension fill in the answers for the new platform too, which added science to the list of subjects.
 
 sanderDijkxhoorn:
-First year of MBO, writing the function to gether all answers and created auto fillin for Textentry questions
+I started working on this project in my first year of MBO Utrecht, I wrote a new version for the latest version of Noordhoff with help of TechnologicNick.
 
 # Current state
 
@@ -23,8 +23,7 @@ First year of MBO, writing the function to gether all answers and created auto f
 # Installation
 
 1. Clone this repository or click here -> (<a href="https://github.com/sanderDijkxhoorn/NoordhoffRepairman/archive/refs/heads/main.zip" target="_blank">master.zip</a>)
-2. Enable developer mode. &nbsp; hrome: [chrome://extensions/](chrome://extensions/)
-Brave: [brave://extensions/](brave://extensions/)
+2. Enable developer mode. Chrome: [chrome://extensions/](chrome://extensions/) Brave: [brave://extensions/](brave://extensions/)
 3. Click "Load unpacked" and select the folder you cloned the repository to. (if you are using the master.zip make sure to unzip it first)
 
 # Usage
