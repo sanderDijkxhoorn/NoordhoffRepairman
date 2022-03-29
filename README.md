@@ -23,8 +23,7 @@ First year of MBO, writing the function to gether all answers and created auto f
 # Installation
 
 1. Clone this repository or click here -> (<a href="https://github.com/sanderDijkxhoorn/NoordhoffRepairman/archive/refs/heads/main.zip" target="_blank">master.zip</a>)
-2. Enable developer mode. 
-Chrome: [chrome://extensions/](chrome://extensions/)
+2. Enable developer mode. &nbsp; hrome: [chrome://extensions/](chrome://extensions/)
 Brave: [brave://extensions/](brave://extensions/)
 3. Click "Load unpacked" and select the folder you cloned the repository to. (if you are using the master.zip make sure to unzip it first)
 
