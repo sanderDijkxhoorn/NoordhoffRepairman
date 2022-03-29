@@ -16,9 +16,9 @@ I started working on this project in my first year of MBO Utrecht, I wrote a new
 
 # Current state
 
-* Assigments using Digilino should still work.
-* Text entry questions automatically fill in if there is only one page per question. (You have to make a little change to each answer to make it detect you filled in an answer. Still working on a bypass.)
-* There are other assignments where it could grab the answers from but they are currently only logged inside of the console.
+- Assigments using Digilino should still work.
+- Text entry questions automatically fill in if there is only one page per question. (You have to make a little change to each answer to make it detect you filled in an answer. Still working on a bypass.)
+- There are other assignments where it could grab the answers from but they are currently only logged inside of the console.
 
 # Installation
 
