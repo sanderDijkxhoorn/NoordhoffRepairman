@@ -16,15 +16,15 @@ First year of MBO, writing the function to gether all answers and created auto f
 
 # Current state
 
-* Assigments using Digilino should still work.
-* Text entry questions automatically fill in if there is only one page per question. (You have to make a little change to each answer to make it detect you filled in an answer. Still working on a bypass.)
-* There are other assignments where it could grab the answers from but they are currently only logged inside of the console.
+- Assigments using Digilino should still work.
+- Text entry questions automatically fill in if there is only one page per question. (You have to make a little change to each answer to make it detect you filled in an answer. Still working on a bypass.)
+- There are other assignments where it could grab the answers from but they are currently only logged inside of the console.
 
 # Installation
 
 1. Clone this repository or click here -> (<a href="https://github.com/sanderDijkxhoorn/NoordhoffRepairman/archive/refs/heads/main.zip" target="_blank">master.zip</a>)
 2. Enable developer mode. &nbsp; hrome: [chrome://extensions/](chrome://extensions/)
-Brave: [brave://extensions/](brave://extensions/)
+   Brave: [brave://extensions/](brave://extensions/)
 3. Click "Load unpacked" and select the folder you cloned the repository to. (if you are using the master.zip make sure to unzip it first)
 
 # Usage
