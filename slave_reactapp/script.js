@@ -8,7 +8,7 @@ async function XMLPARGE(url) {
 }
 
 async function FetchAnswerSEQ(answerditaurl) {
-  console.log("Fetching Sequencing answer('s)");
+  // console.log("Fetching Sequencing answer('s)");
 
   const xmlparsed = await XMLPARGE(answerditaurl.url);
   const btns = xmlparsed.querySelectorAll("lcAnswerContent2 p");
@@ -24,7 +24,7 @@ async function FetchAnswerSEQ(answerditaurl) {
 }
 
 async function FetchAnswerOV(answerditaurl) {
-  console.log("Fetching Open vraag answer('s)");
+  // console.log("Fetching Open vraag answer('s)");
 
   const xmlparsed = await XMLPARGE(answerditaurl.url);
   const btns = xmlparsed.querySelectorAll("lcOpenAnswer2 p");
@@ -41,7 +41,7 @@ async function FetchAnswerOV(answerditaurl) {
 }
 
 async function FetchAnswerIC(answerditaurl) {
-  console.log("Fetching Inline choice answer('s)");
+  // console.log("Fetching Inline choice answer('s)");
 
   const xmlparsed = await XMLPARGE(answerditaurl.url);
   const tcorrectresponse = xmlparsed.querySelectorAll("lcCorrectResponse2");
@@ -52,15 +52,15 @@ async function FetchAnswerIC(answerditaurl) {
     tcount++;
     console.log(
       "Vraag: " +
-        tcount +
-        ": " +
-        el.parentElement.querySelector("lceAnswerContentInline").textContent
+      tcount +
+      ": " +
+      el.parentElement.querySelector("lceAnswerContentInline").textContent
     );
   }
 }
 
 async function FetchAnswerMATCH(answerditaurl) {
-  console.log("Fetching Matching answer('s)");
+  // console.log("Fetching Matching answer('s)");
 
   const xmlparsed = await XMLPARGE(answerditaurl.url);
   const tcorrectresponse = xmlparsed.querySelectorAll("lcMatchingPair2");
@@ -106,7 +106,7 @@ async function FetchAnswerMATCH(answerditaurl) {
 }
 
 async function FetchAnswerSC(answerditaurl) {
-  console.log("Fetching Single choice answer('s)");
+  // console.log("Fetching Single choice answer('s)");
 
   // console.log(answerditaurl.url)
 
@@ -118,7 +118,7 @@ async function FetchAnswerSC(answerditaurl) {
     // console.log(el.parentElement)
     console.log(
       "FetchAnswerSC: " +
-        el.parentElement.querySelector("lcAnswerContent2 p").textContent
+      el.parentElement.querySelector("lcAnswerContent2 p").textContent
     );
   }
 
@@ -126,7 +126,7 @@ async function FetchAnswerSC(answerditaurl) {
 }
 
 async function FetchAnswerMultiMATCH(answerditaurl) {
-  console.log("Fetching Multi choice answer('s)");
+  // console.log("Fetching Multi choice answer('s)");
 
   const xmlparsed = await XMLPARGE(answerditaurl.url);
   const choises = Object.fromEntries(
@@ -143,16 +143,16 @@ async function FetchAnswerMultiMATCH(answerditaurl) {
   );
   const answers = Array.from(xmlparsed.querySelectorAll("lceMatchPair")).map(
     (el) =>
-      statements[el.children[0].getAttribute("href").split("/")[1]] +
-      " = " +
-      choises[el.children[1].getAttribute("href").split("/")[1]]
+    statements[el.children[0].getAttribute("href").split("/")[1]] +
+    " = " +
+    choises[el.children[1].getAttribute("href").split("/")[1]]
   );
 
   answers.forEach((answer) => console.log(answer));
 }
 
 async function FetchAnswerTE(answerditaurl) {
-  console.log("Fetching Text entry answer('s)");
+  // console.log("Fetching Text entry answer('s)");
 
   const xmlparsed = await XMLPARGE(answerditaurl.url);
   const btns = xmlparsed.querySelectorAll("lceTextEntryOptions");
@@ -192,7 +192,7 @@ function reactapp_npEnableFetchHook(enabled) {
       const result = window.fetch_original(...args);
       return result.then((r) => {
         setTimeout(function () {
-          console.log("Waited 2s for questions to load.");
+          // console.log("Waited 2s for questions to load.");
           if (r.url.includes("Inline%20choice") && r.url.endsWith(".dita")) {
             // console.log("Found 'Inline choice.dita'!");
             FetchAnswerIC(r);
@@ -230,7 +230,8 @@ function reactapp_npEnableFetchHook(enabled) {
             r.url.endsWith(".dita") &&
             !r.url.endsWith("Tekstbron.dita") &&
             !r.url.endsWith("Theorie.dita") &&
-            !r.url.endsWith("Animatie.dita")
+            !r.url.endsWith("Animatie.dita") &&
+            !r.url.endsWith("Theory.dita")
           ) {
             console.log("Nieuwe soort opdracht?!?! " + r.url);
           }
@@ -244,12 +245,12 @@ function reactapp_npEnableFetchHook(enabled) {
   }
 }
 
-function reactapp_npShowAnswers(/* currentPage */) {
+function reactapp_npShowAnswers( /* currentPage */ ) {
   // console.log(currentPage)
   // console.log("Showing answers");
 }
 
-function reactapp_npOnHashChange(/* hashChangeEvent */) {
+function reactapp_npOnHashChange( /* hashChangeEvent */ ) {
   // console.log(hashChangeEvent);
 
   const regexUuid =
