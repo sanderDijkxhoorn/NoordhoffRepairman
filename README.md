@@ -1,5 +1,19 @@
 # Noordhoff Repairman
 
+## ⚠️ DISCLAIMER ⚠️
+
+**This project is no longer actively maintained.** I (sanderDijkxhoorn) no longer work on this project and no longer have access to the Noordhoff platform. 
+
+**USE AT YOUR OWN RISK:**
+- I cannot guarantee that this code still works with current versions of the platform
+- I am not liable for any issues, problems, or consequences that may arise from using this extension
+- The platform may have changed since this was last updated, potentially breaking functionality
+- Use of this extension may violate terms of service of the educational platform
+
+This repository is made available as-is for educational and archival purposes only.
+
+---
+
 A Google Chrome extension that automatically fills in answers for online homework of subjects published by Noordhoff Uitgevers.
 
 <p align="center">
